@@ -1,1 +1,1 @@
-ng serve --host 192.168.31.222
+ng serve --host 192.168.29.81

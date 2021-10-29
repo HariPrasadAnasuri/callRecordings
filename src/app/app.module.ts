@@ -16,7 +16,7 @@ import {MatDialogModule} from '@angular/material';
     AppComponent,
     PlayerComponent,
     ProfileComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -70,7 +70,7 @@ export class CloudService {
   host: string
 
   constructor(private http: HttpClient) {
-    this.host =  'http://192.168.31.222:7000';
+    this.host =  'http://192.168.29.81:7000';
   }
   getRecordings(): Observable<any> {
     /*return this.http.get(this.endpoint).pipe(
