@@ -79,7 +79,7 @@ export class PlayerComponent {
     // listen to response
     dialogRef.afterClosed().subscribe(dialogResult => {
       if (dialogResult) {
-        this.cloudService.markFileAsDelete(file.id).subscribe(files => {
+        this.cloudService.markFileAsDelete(this.currentFile.file.id).subscribe(files => {
           this.files.splice(index, 1);
         });
 
@@ -100,7 +100,7 @@ export class PlayerComponent {
     // listen to response
     dialogRef.afterClosed().subscribe(dialogResult => {
       if (dialogResult) {
-        this.cloudService.markFileAsImportant(file.id).subscribe(files => {
+        this.cloudService.markFileAsImportant(this.currentFile.file.id).subscribe(files => {
           this.files.splice(index, 1);
         });
       }
@@ -120,7 +120,7 @@ export class PlayerComponent {
     // listen to response
     dialogRef.afterClosed().subscribe(dialogResult => {
       if (dialogResult) {
-        this.cloudService.markFileAsVisited(file.id).subscribe(files => {
+        this.cloudService.markFileAsVisited(this.currentFile.file.id).subscribe(files => {
           this.files.splice(index, 1);
         });
       }

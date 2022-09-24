@@ -67,35 +67,35 @@ export class CloudService {
     }
   ];
 
-  host: string
+  host: string;
 
   constructor(private http: HttpClient) {
-    this.host =  'http://192.168.29.81:7000';
+    this.host =  'http://192.168.29.49:7000';
   }
   getRecordings(): Observable<any> {
     /*return this.http.get(this.endpoint).pipe(
       map(this.extractData),
       catchError(this.handleError)
     );*/
-    let endPoint = this.host+"/recordings";
+    const endPoint = this.host + "/recordings";
     return this.http.get<any>(
       endPoint, { observe: 'response' });
   }
 
-  markFileAsDelete(id){
-    let endPoint = this.host+"/recordings/"+id+"/remove";
+  markFileAsDelete(id) {
+    const endPoint = this.host + "/recordings/"+ id +"/remove";
     return this.http.get<any>(
       endPoint, { observe: 'response' });
   }
 
-  markFileAsImportant(id){
-    let endPoint = this.host+"/recordings/"+id+"/important";
+  markFileAsImportant(id) {
+    const endPoint = this.host + "/recordings/"+ id +"/important";
     return this.http.get<any>(
       endPoint, { observe: 'response' });
   }
 
-  markFileAsVisited(id){
-    let endPoint = this.host+"/recordings/"+id+"/visited";
+  markFileAsVisited(id) {
+    const endPoint = this.host + "/recordings/"+ id +"/visited";
     return this.http.get<any>(
       endPoint, { observe: 'response' });
   }
